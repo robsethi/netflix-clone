@@ -4,7 +4,7 @@ import MovieCard from "./MovieCard";
 import { getServerSession } from "next-auth";
 import { authOptions } from "../utils/auth";
 
-async function getData(userId) {
+async function getData(userId: string) {
   const data = await prisma.movie.findMany({
     select: {
       id: true,
